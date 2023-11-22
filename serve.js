@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-function cadastrarUser() {
-    return {user: 'jv', id: 1}
+function cadastrarUser(body) {
+    return {user: body.name, id: 1}
 }
 
 app.post('/user', (req, res) => {
